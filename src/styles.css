@@ -90,7 +90,12 @@ h6 {
   /* color variables */
   --primary: #ad1fea;
   --primary-hover: #c75af6;
+
   --secondary: #4661e6;
+  --secondary-light: #cfd7ff
+
+  --fixme: #3a4374;
+
   --dark: #373f68;
   --danger: #f49f85;
 
@@ -98,10 +103,9 @@ h6 {
   --secondary-white: #f2f4ff;
   --teritery-white: #f7f8fd;
 
-  /* --lviv-blue: #3a4374;
   --ocean-night: #647196;
 
-  --maya-blue: #62bcfa; */
+  --maya-blue: #62bcfa;
   /* various button */
 }
 
