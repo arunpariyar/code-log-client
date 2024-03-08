@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "jost-variable";
+  src: url("./assets/fonts/Jost-VariableFont_wght.ttf");
+}
+h1 {
+  font-family: "jost-variable";
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 35px;
+  letter-spacing: 0.33px;
+}
