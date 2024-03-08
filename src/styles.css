@@ -1,4 +1,101 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  /* font variables */
+  --body-1-size: 16px;
+  --body-1-line: 23px;
+  --body-1-weight: 400;
+
+  --body-2-size: 15px;
+  --body-2-line: 22px;
+  --body-2-weight: 400;
+
+  --body-3-size: 13px;
+  --body-3-line: 19px;
+  --body-3-weight: 600;
+
+  --heading-1-weight: 700;
+  --heading-1-size: 24px;
+  --heading-1-line: 35px;
+  --heading-1-spacing: 0.33px;
+
+  --heading-2-weight: 700;
+  --heading-2-size: 20px;
+  --heading-2-line: 29px;
+  --heading-2-spacing: 0.25px;
+
+  --heading-3-weight: 700;
+  --heading-3-size: 18px;
+  --heading-3-line: 26px;
+  --heading-3-spacing: 0.25px;
+
+  --heading-4-weight: 700;
+  --heading-4-size: 14px;
+  --heading-4-line: 20px;
+  --heading-4-spacing: 0.2px;
+
+  /* color variables */
+  --singapore-orchid: #ad1fea;
+  --bluetiful: #4661e6;
+  --bay-of-many: #373f68;
+  --white: #fff;
+  --carte-blanche: #f2f4ff;
+  --icy-lilac: #f7f8fd;
+  --lviv-blue: #3a4374;
+  --ocean-night: #647196;
+  --creamy-peach: #f49f85;
+  --maya-blue: #62bcfa;
+
+  /* various button */
+}
+
 @font-face {
   font-family: "jost-variable";
   src: url("./assets/fonts/Jost-VariableFont_wght.ttf");
@@ -9,4 +106,8 @@ h1 {
   font-size: 35px;
   line-height: 35px;
   letter-spacing: 0.33px;
+}
+p {
+  font-size: var(--body-1-size);
+  line-height: var(--body-1-line);
 }
