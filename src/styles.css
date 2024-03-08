@@ -82,23 +82,29 @@ h6 {
   --heading-4-spacing: 0.2px;
 
   /* color variables */
-  --singapore-orchid: #ad1fea;
-  --bluetiful: #4661e6;
-  --bay-of-many: #373f68;
-  --white: #fff;
-  --carte-blanche: #f2f4ff;
-  --icy-lilac: #f7f8fd;
-  --lviv-blue: #3a4374;
-  --ocean-night: #647196;
-  --creamy-peach: #f49f85;
-  --maya-blue: #62bcfa;
+  --primary: #ad1fea;
+  --secondary: #4661e6;
+  --dark: #373f68;
+  --danger: #f49f85;
 
+  --primary-white: #fff;
+  --secondary-white: #f2f4ff;
+  --teritery-white: #f7f8fd;
+
+  /* --lviv-blue: #3a4374;
+  --ocean-night: #647196;
+
+  --maya-blue: #62bcfa; */
   /* various button */
 }
 
 @font-face {
   font-family: "jost-variable";
   src: url("./assets/fonts/Jost-VariableFont_wght.ttf");
+}
+
+body {
+  background-color: var(--teritery-white);
 }
 h1 {
   font-family: "jost-variable";
