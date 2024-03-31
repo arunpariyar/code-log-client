@@ -1,0 +1,40 @@
+.roadmap-sidebar-container {
+  background-color: var(--primary-white);
+  padding: 20px;
+  border-radius: 10px;
+}
+.heading-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--jost);
+  line-height: 2;
+  color: var(--dark);
+}
+
+.view-link {
+  font-family: var(--jost);
+  color: var(--dark);
+  font-weight: bold;
+}
+
+.left {
+  font-family: var(--jost);
+  font-size: var(--h4-size);
+  font-weight: var(--h4-weight);
+  line-height: var(--h4-line);
+  color: var(--dark);
+}
+
+.title {
+  font-family: var(--jost);
+  font-size: var(--h2-size);
+  font-weight: var(--h2-weight);
+  line-height: var(--h2-line);
+  letter-spacing: var(--h3-spacing);
+}

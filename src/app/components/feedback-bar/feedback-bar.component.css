@@ -6,8 +6,8 @@
   background-color: var(--dark);
   color: white;
   border-radius: 8px;
-  margin: 5px;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .feedback-group {
@@ -21,4 +21,9 @@
   font-weight: var(--h3-weight);
   line-height: var(--h3-line);
   letter-spacing: var(--h3-spacing);
+}
+
+.display-category-container {
+  display: flex;
+  list-style: none;
 }
