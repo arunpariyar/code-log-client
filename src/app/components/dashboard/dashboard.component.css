@@ -7,12 +7,12 @@
 }
 
 .side-bar {
-  grid-column: col-start 1 / col-end 3;
+  grid-column: col-start 1 / col-end 2;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
 .main-area {
-  grid-column: col-start 4 / col-end 10;
+  grid-column: col-start 3 / col-end 10;
 }

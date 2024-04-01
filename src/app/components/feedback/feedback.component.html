@@ -1,0 +1,13 @@
+<div class="feedback-container">
+  <app-upvoter-btn [count]="feedback.upvote"></app-upvoter-btn>
+  <div class="feedback-items">
+    <div class="feedback-info">
+      <p class="feedback-title">{{ feedback.title }}</p>
+      <p class="feedback-summary">{{ feedback.summary }}</p>
+      <app-category-btn [category]="feedback.category"></app-category-btn>
+    </div>
+    <div class="comments">
+      <p>💬 2</p>
+    </div>
+  </div>
+</div>
