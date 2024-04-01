@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-display-category',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./display-category.component.css'],
 })
 export class DisplayCategoryComponent {
-  catagories = ['All', 'UI', 'UX', 'Enhancement', 'Bug', 'Feature'];
+  @Input() catagories: string[] = ['test'];
 }
