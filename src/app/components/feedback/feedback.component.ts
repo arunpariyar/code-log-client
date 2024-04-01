@@ -1,4 +1,6 @@
+
 import { Component, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-feedback',
@@ -6,5 +8,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./feedback.component.css'],
 })
 export class FeedbackComponent {
-  @Input('info') feedback: any;
+
+  @Input('info') feedback!: any;
+
 }
