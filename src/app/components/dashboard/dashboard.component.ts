@@ -15,13 +15,5 @@ export class DashboardComponent {
       comments: 2,
       category: 'Enhancement',
     },
-    {
-      title: 'Add a dark theme option',
-      summary:
-        'It would help people with light senstivities who prefer dark mode',
-      upvote: 99,
-      comments: 4,
-      category: 'Feature',
-    },
   ];
 }
