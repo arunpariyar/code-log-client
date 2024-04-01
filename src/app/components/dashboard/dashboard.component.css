@@ -16,3 +16,9 @@
 .main-area {
   grid-column: col-start 3 / col-end 10;
 }
+
+.feedback-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
