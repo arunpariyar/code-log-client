@@ -13,6 +13,7 @@ import { MainLogoComponent } from './components/main-logo/main-logo.component';
 import { DisplayCategoryComponent } from './components/display-category/display-category.component';
 import { RoadmapSidebarComponent } from './components/roadmap-sidebar/roadmap-sidebar.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { EmptyDisplayComponent } from './components/empty-display/empty-display.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     DisplayCategoryComponent,
     RoadmapSidebarComponent,
     FeedbackComponent,
+    EmptyDisplayComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
