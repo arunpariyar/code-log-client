@@ -14,6 +14,9 @@ import { DisplayCategoryComponent } from './components/display-category/display-
 import { RoadmapSidebarComponent } from './components/roadmap-sidebar/roadmap-sidebar.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 
+import { EmptyDisplayComponent } from './components/empty-display/empty-display.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +30,9 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     DisplayCategoryComponent,
     RoadmapSidebarComponent,
     FeedbackComponent,
+
+    EmptyDisplayComponent,
+
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

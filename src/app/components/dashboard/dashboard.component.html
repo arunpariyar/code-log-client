@@ -6,6 +6,23 @@
   </div>
   <div class="main-area">
     <app-feedback-bar></app-feedback-bar>
+
+
+    <div
+      class="feedback-column"
+      *ngIf="feedbacks.length > 0; else emptyDisplay"
+    >
+      <app-feedback
+        *ngFor="let feedback of feedbacks"
+        [info]="feedback"
+      ></app-feedback>
+    </div>
+
+    <ng-template #emptyDisplay
+      ><app-empty-display></app-empty-display
+    ></ng-template>
+
     <app-feedback></app-feedback>
+
   </div>
 </div>

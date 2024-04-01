@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+
+import { Component, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-feedback',
@@ -6,11 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./feedback.component.css'],
 })
 export class FeedbackComponent {
-  feedback = {
-    title: 'Add tags for solutions',
-    summary: 'Easier to search for solutions based on a specific task',
-    upvote: 112,
-    comments: 2,
-    category: 'Enhancement',
-  };
+
+  @Input('info') feedback!: any;
+
 }
