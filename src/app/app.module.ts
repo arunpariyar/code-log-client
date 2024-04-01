@@ -12,6 +12,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MainLogoComponent } from './components/main-logo/main-logo.component';
 import { DisplayCategoryComponent } from './components/display-category/display-category.component';
 import { RoadmapSidebarComponent } from './components/roadmap-sidebar/roadmap-sidebar.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { RoadmapSidebarComponent } from './components/roadmap-sidebar/roadmap-si
     MainLogoComponent,
     DisplayCategoryComponent,
     RoadmapSidebarComponent,
+    FeedbackComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

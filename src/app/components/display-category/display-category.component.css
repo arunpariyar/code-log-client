@@ -7,3 +7,11 @@
   background-color: var(--primary-white);
   border-radius: 10px;
 }
+
+.feedback-title {
+  font-family: var(--jost);
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  line-height: var(--h3-line);
+  letter-spacing: var(--h3-spacing);
+}

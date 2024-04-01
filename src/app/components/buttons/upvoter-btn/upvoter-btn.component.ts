@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./upvoter-btn.component.css'],
 })
 export class UpvoterBtnComponent {
-  @Input() count!: string;
+  @Input() count!: number;
 }
