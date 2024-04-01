@@ -1,0 +1,29 @@
+.feedback-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--dark);
+  color: white;
+  border-radius: 8px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.feedback-group {
+  display: flex;
+  gap: 10px;
+}
+
+.suggestions {
+  font-family: var(--jost);
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+  line-height: var(--h3-line);
+  letter-spacing: var(--h3-spacing);
+}
+
+.display-category-container {
+  display: flex;
+  list-style: none;
+}

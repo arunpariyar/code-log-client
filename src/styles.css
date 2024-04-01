@@ -1,1 +1,126 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: "jost-variable";
+  src: url("./assets/fonts/Jost-VariableFont_wght.ttf");
+}
+
+:root {
+  /* font variables */
+  --jost: "jost-variable";
+  --body-1-size: 16px;
+  --body-1-line: 23px;
+  --body-1-weight: 400;
+
+  --body-2-size: 15px;
+  --body-2-line: 22px;
+  --body-2-weight: 400;
+
+  --body-3-size: 13px;
+  --body-3-line: 19px;
+  --body-3-weight: 600;
+
+  --h1-weight: 700;
+  --h1-size: 24px;
+  --h1-line: 35px;
+  --h1-spacing: 0.33px;
+
+  --h2-weight: 700;
+  --h2-size: 20px;
+  --h2-line: 29px;
+  --h2-spacing: 0.25px;
+
+  --h3-weight: 700;
+  --h3-size: 18px;
+  --h3-line: 26px;
+  --h3-spacing: 0.25px;
+
+  --h4-weight: 700;
+  --h4-size: 14px;
+  --h4-line: 20px;
+  --h4-spacing: 0.2px;
+
+  /* color variables */
+  --primary: #ad1fea;
+  --primary-hover: #c75af6;
+
+  --secondary: #4661e6;
+  --secondary-light: #cfd7ff
+
+  --fixme: #3a4374;
+
+  --dark: #373f68;
+  --danger: #f49f85;
+
+  --primary-white: #fff;
+  --secondary-white: #f2f4ff;
+  --teritery-white: #f7f8fd;
+  --background-white: #f2f2f2
+
+  --ocean-night: #647196;
+
+  --maya-blue: #62bcfa;
+  /* various button */
+}
+
+body {
+  background-color: var(--teritery-white);
+}
+h1 {
+  font-family: "jost-variable";
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 35px;
+  letter-spacing: 0.33px;
+}
+p {
+  font-size: var(--body-1-size);
+  line-height: var(--body-1-line);
+}
