@@ -8,14 +8,5 @@ import { Component } from '@angular/core';
 export class DashboardComponent {
   allCatagories = ['All', 'UI', 'UX', 'Enhancement', 'Bug', 'Feature'];
 
-  feedbacks = [
-    {
-      title: 'Add tags for solutions',
-      summary: 'Easier to search for solutions based on a specific task',
-      upvote: 112,
-      comments: 2,
-      category: 'Enhancement',
-    },
-  ];
-
+  feedbacks = [];
 }
