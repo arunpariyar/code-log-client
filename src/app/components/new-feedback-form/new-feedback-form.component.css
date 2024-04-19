@@ -38,6 +38,14 @@
 
 .backBtn {
   cursor: pointer;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.backBtn:active {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--dark);
 }
 
 .plus-sign {
