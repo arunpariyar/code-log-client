@@ -1,10 +1,15 @@
+// Modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+//App Component
 import { AppComponent } from './app.component';
+
+//CUSTOM COMPONENTS
 import { FeedbackBarComponent } from './components/feedback-bar/feedback-bar.component';
-import { PrimaryBtnComponent } from './components/buttons/primary-btn/primary-btn.component';
 import { UpvoterBtnComponent } from './components/buttons/upvoter-btn/upvoter-btn.component';
 import { CategoryBtnComponent } from './components/buttons/category-btn/category-btn.component';
 import { ButtonComponent } from './components/button/button.component';
@@ -13,15 +18,14 @@ import { MainLogoComponent } from './components/main-logo/main-logo.component';
 import { DisplayCategoryComponent } from './components/display-category/display-category.component';
 import { RoadmapSidebarComponent } from './components/roadmap-sidebar/roadmap-sidebar.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
-
 import { EmptyDisplayComponent } from './components/empty-display/empty-display.component';
-
+import { PrimaryBtnComponent } from './components/buttons/primary-btn/primary-btn.component';
+import { NewFeedbackFormComponent } from './components/new-feedback-form/new-feedback-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FeedbackBarComponent,
-    PrimaryBtnComponent,
     UpvoterBtnComponent,
     CategoryBtnComponent,
     ButtonComponent,
@@ -30,11 +34,18 @@ import { EmptyDisplayComponent } from './components/empty-display/empty-display.
     DisplayCategoryComponent,
     RoadmapSidebarComponent,
     FeedbackComponent,
-
     EmptyDisplayComponent,
-
+    PrimaryBtnComponent,
+    NewFeedbackFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

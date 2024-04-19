@@ -65,7 +65,7 @@ h6 {
 
   --body-3-size: 13px;
   --body-3-line: 19px;
-  --body-3-weight: 600;
+  --body-3-weight: 400;
 
   --h1-weight: 700;
   --h1-size: 24px;
@@ -92,20 +92,21 @@ h6 {
   --primary-hover: #c75af6;
 
   --secondary: #4661e6;
-  --secondary-light: #cfd7ff
+  --secondary-light: #cfd7ff;
 
-  --fixme: #3a4374;
-
-  --dark: #373f68;
-  --danger: #f49f85;
 
   --primary-white: #fff;
   --secondary-white: #f2f4ff;
   --teritery-white: #f7f8fd;
   --background-white: #f2f2f2
 
-  --ocean-night: #647196;
+  --fixme: #3a4374;
 
+  --dark: #373f68;
+  --light-text: #647196;
+ 
+  /* not used yet */
+  --danger: #f49f85;
   --maya-blue: #62bcfa;
   /* various button */
 }
