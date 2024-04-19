@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -7,14 +7,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './new-feedback-form.component.html',
   styleUrls: ['./new-feedback-form.component.css'],
 })
-export class NewFeedbackFormComponent {
+export class NewFeedbackFormComponent implements OnInit {
   feedbackForm!: FormGroup;
   categories = ['UI', 'UX', 'Enhancement', 'Bug', 'Feature'];
-  constructor(private router: Router, private formBuilders: FormBuilder) {
+  constructor(private router: Router, private formBuilders: FormBuilder) {}
+
+  ngOnInit(): void {
     this.feedbackForm = this.formBuilders.group({
       title: ['', Validators.required],
       category: ['', Validators.required],
-      details: ['', Validators.required],
+      detail: ['', Validators.required],
     });
   }
 

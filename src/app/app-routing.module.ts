@@ -4,11 +4,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NewFeedbackFormComponent } from './components/new-feedback-form/new-feedback-form.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', title: 'Dashboard', component: DashboardComponent },
+  { path: '', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent },
   {
-    path: 'feedback-form',
-    title: 'FeedbackForm',
+    path: 'feedback',
     component: NewFeedbackFormComponent,
   },
 ];

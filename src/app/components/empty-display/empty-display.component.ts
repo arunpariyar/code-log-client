@@ -9,6 +9,6 @@ import { Router } from '@angular/router';
 export class EmptyDisplayComponent {
   constructor(private router: Router) {}
   navigateToForm() {
-    this.router.navigate(['/feedback-form']);
+    this.router.navigate(['/feedback']);
   }
 }
