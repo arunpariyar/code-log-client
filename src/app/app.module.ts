@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 //App Component
 import { AppComponent } from './app.component';
 
@@ -45,6 +46,7 @@ import { NewFeedbackFormComponent } from './components/new-feedback-form/new-fee
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
