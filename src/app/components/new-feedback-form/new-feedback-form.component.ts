@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/api.service';
-import { ConstantPool } from '@angular/compiler';
+import { addFeedback } from 'src/app/store/feedback.actions';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-new-feedback-form',
@@ -15,7 +16,8 @@ export class NewFeedbackFormComponent implements OnInit {
   constructor(
     private router: Router,
     private formBuilders: FormBuilder,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private store: Store
   ) {}
 
   ngOnInit(): void {
@@ -28,16 +30,17 @@ export class NewFeedbackFormComponent implements OnInit {
 
   submitForm() {
     if (this.feedbackForm.valid) {
-      console.log(this.feedbackForm.value);
       const newFeedback = this.apiService.createFeedback(
         this.feedbackForm.value
       );
-      newFeedback.subscribe((data) => console.log(data));
-      //TODO intergrate ngRx and then add it directly there
+      newFeedback.subscribe((data) =>
+        this.store.dispatch(addFeedback({ feedback: data }))
+      );
     }
+    this.router.navigate(['/', 'dashboard']);
   }
 
   navigateToDashboard() {
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/', 'dashboard']);
   }
 }
