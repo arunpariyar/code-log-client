@@ -26,6 +26,8 @@ import { StoreModule } from '@ngrx/store';
 
 //NGRX Reducers
 import { feedbackReducer } from './store/feedback.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { FeedbackEffects } from './store/feedback.effects';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,7 @@ import { feedbackReducer } from './store/feedback.reducer';
     StoreModule.forRoot({
       feedback: feedbackReducer,
     }),
+    EffectsModule.forRoot([FeedbackEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent],

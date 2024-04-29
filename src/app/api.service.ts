@@ -14,4 +14,7 @@ export class ApiService {
   createFeedback(feedback: Partial<Feedback>): Observable<Feedback> {
     return this.http.post<Feedback>(this.apiUrl + '/feedback', feedback);
   }
+  getAllFeedback(): Observable<Feedback[]> {
+    return this.http.get<Feedback[]>(this.apiUrl + '/feedback');
+  }
 }
