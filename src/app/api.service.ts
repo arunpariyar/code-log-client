@@ -12,9 +12,9 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   createFeedback(feedback: Partial<Feedback>): Observable<Feedback> {
-    return this.http.post<Feedback>(this.apiUrl + '/feedback', feedback);
+    return this.http.post<Feedback>(this.apiUrl + '/api/feedback', feedback);
   }
   getAllFeedback(): Observable<Feedback[]> {
-    return this.http.get<Feedback[]>(this.apiUrl + '/feedback');
+    return this.http.get<Feedback[]>(this.apiUrl + '/api/feedback');
   }
 }
