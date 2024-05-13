@@ -22,6 +22,12 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { EmptyDisplayComponent } from './components/empty-display/empty-display.component';
 import { PrimaryBtnComponent } from './components/buttons/primary-btn/primary-btn.component';
 import { NewFeedbackFormComponent } from './components/new-feedback-form/new-feedback-form.component';
+import { StoreModule } from '@ngrx/store';
+
+//NGRX Reducers
+import { feedbackReducer } from './store/feedback.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { FeedbackEffects } from './store/feedback.effects';
 
 @NgModule({
   declarations: [
@@ -47,6 +53,10 @@ import { NewFeedbackFormComponent } from './components/new-feedback-form/new-fee
     ReactiveFormsModule,
     CommonModule,
     HttpClientModule,
+    StoreModule.forRoot({
+      feedback: feedbackReducer,
+    }),
+    EffectsModule.forRoot([FeedbackEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent],

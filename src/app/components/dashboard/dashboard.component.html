@@ -8,7 +8,7 @@
     <app-feedback-bar></app-feedback-bar>
     <div
       class="feedback-column"
-      *ngIf="feedbacks.length > 0; else emptyDisplay"
+      *ngIf="feedbacks$ | async as feedbacks; else emptyDisplay"
     >
       <app-feedback
         *ngFor="let feedback of feedbacks"

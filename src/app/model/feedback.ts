@@ -5,8 +5,6 @@ export interface Feedback {
   upvotes: number;
   status: string;
   detail: string;
-  //TODO delete description from front and back both
-  description: string;
   createdAt: string;
   updatedAt: string;
   //TODO bring this back again later when the user is integrated
