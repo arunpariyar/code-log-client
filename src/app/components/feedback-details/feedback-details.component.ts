@@ -30,13 +30,8 @@ export class FeedbackDetailsComponent implements OnInit {
     this.store.dispatch(init());
     this.allFeedbacks$ = this.store.select(selectFeedback);
 
-    //using rxjs operator
     this.allFeedbacks$
       .pipe(map((data) => data.filter((result) => result.id === this.id)))
       .subscribe((data) => (this.currentFeedback = data[0]));
-
-    // this.allFeedbacks$.subscribe((data) => {
-    //   this.currentFeedback = data.find((feedback) => feedback.id === this.id)!;
-    // });
   }
 }

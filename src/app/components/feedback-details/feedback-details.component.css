@@ -7,18 +7,22 @@
   gap: 10%;
 }
 
+.content-control-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .back-ref {
   display: flex;
   gap: 20px;
-  align-items: center;
-  align-self: start;
   font-family: var(--jost);
   font-weight: var(--h4-weight);
   font-size: var(--h4-size);
   line-height: var(--h4-line);
   letter-spacing: var(--h4-spacing);
   color: var(--dark);
-  position: re;
 }
 
 .backBtn {
