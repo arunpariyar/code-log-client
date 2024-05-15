@@ -17,6 +17,7 @@
 .back-ref {
   display: flex;
   gap: 20px;
+
   font-family: var(--jost);
   font-weight: var(--h4-weight);
   font-size: var(--h4-size);

@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Feedback } from 'src/app/model/feedback';
 import { selectFeedback } from 'src/app/store/feedback.selector';
@@ -18,6 +18,7 @@ export class FeedbackDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private store: Store<{ feedback: Feedback[] }>
   ) {}
 
@@ -33,5 +34,8 @@ export class FeedbackDetailsComponent implements OnInit {
     this.allFeedbacks$
       .pipe(map((data) => data.filter((result) => result.id === this.id)))
       .subscribe((data) => (this.currentFeedback = data[0]));
+  }
+  handleClickEdit() {
+    this.router.navigate(['/feedback/edit/', this.currentFeedback.id]);
   }
 }

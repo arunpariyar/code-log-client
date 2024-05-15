@@ -29,6 +29,7 @@ import { feedbackReducer } from './store/feedback.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { FeedbackEffects } from './store/feedback.effects';
 import { FeedbackDetailsComponent } from './components/feedback-details/feedback-details.component';
+import { EditFeedbackFromComponent } from './components/edit-feedback-from/edit-feedback-from.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { FeedbackDetailsComponent } from './components/feedback-details/feedback
     PrimaryBtnComponent,
     NewFeedbackFormComponent,
     FeedbackDetailsComponent,
+    EditFeedbackFromComponent,
   ],
   imports: [
     AppRoutingModule,

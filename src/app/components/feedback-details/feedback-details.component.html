@@ -7,7 +7,10 @@
         </div>
         <a class="backBtn" routerLink="/dashboard">Go Back</a>
       </div>
-      <app-primary-btn text="Edit Feedback"></app-primary-btn>
+      <app-primary-btn
+        text="Edit Feedback"
+        (click)="handleClickEdit()"
+      ></app-primary-btn>
     </div>
 
     <app-feedback [info]="currentFeedback"></app-feedback>
