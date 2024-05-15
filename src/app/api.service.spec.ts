@@ -7,6 +7,8 @@ import {
   mockFeedbacks,
   postMock,
   patchMock,
+  deleteMock,
+  deleteErrorMock,
 } from 'src/test-data/mock-feedbacks';
 import { ApiService } from './api.service';
 
@@ -86,7 +88,7 @@ describe('ApiService', () => {
     req.flush(patchMock.updatedFeedback);
   });
 
-  fit('should fail the updated', () => {
+  it('should fail the updated', () => {
     apiService
       .updateFeedback(patchMock.errorId, patchMock.partialFeedback)
       .subscribe({
@@ -100,5 +102,29 @@ describe('ApiService', () => {
 
     expect(req.request.method).toEqual('PATCH');
     req.flush(patchMock.errorMessage);
+  });
+
+  it('should delete feedback', () => {
+    apiService.deleteFeedback(deleteMock.id).subscribe((response) => {
+      expect(response).toBe(deleteMock.response);
+    });
+
+    const url = `http://localhost:8000/api/feedback/${deleteMock.id}`;
+    const req = httpTestingController.expectOne(url);
+
+    expect(req.request.method).toEqual('DELETE');
+    req.flush(deleteMock.response);
+  });
+
+  fit('should return an delete error', () => {
+    apiService.deleteFeedback(deleteErrorMock.id).subscribe((response) => {
+      expect(response).toBe(deleteErrorMock.response);
+    });
+
+    const url = `http://localhost:8000/api/feedback/${deleteErrorMock.id}`;
+    const req = httpTestingController.expectOne(url);
+
+    expect(req.request.method).toEqual('DELETE');
+    req.flush(deleteErrorMock.response);
   });
 });

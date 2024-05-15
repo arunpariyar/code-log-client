@@ -93,3 +93,27 @@ export const patchMock = {
     message: 'feedback with id: 148a7c31 not found',
   },
 };
+
+export const deleteMock = {
+  id: '148a7c31-17ba-4ef1-a5a7-9c0908afcd3b',
+  feedback: {
+    id: '148a7c31-17ba-4ef1-a5a7-9c0908afcd3b',
+    title: 'Offline Mode',
+    category: 'Feature',
+    upvotes: 0,
+    status: 'Live',
+    detail: 'changed from test',
+    createdAt: '2024-05-09T12:39:13.177Z',
+    updatedAt: '2024-05-14T08:55:24.238Z',
+  },
+  response: {
+    message: 'feedback with id: 148a7c31-17ba-4ef1-a5a7-9c0908afcd3b deleted',
+  },
+};
+
+export const deleteErrorMock = {
+  id: '12345678',
+  response: {
+    message: "Item doesn't exist",
+  },
+};

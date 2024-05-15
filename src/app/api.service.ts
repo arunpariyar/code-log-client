@@ -26,4 +26,9 @@ export class ApiService {
       changes
     );
   }
+  deleteFeedback(id: string): Observable<{ message: string }> {
+    return this.http.delete<{ message: string }>(
+      this.apiUrl + '/api/feedback/' + id
+    );
+  }
 }
