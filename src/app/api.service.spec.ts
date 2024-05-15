@@ -116,7 +116,7 @@ describe('ApiService', () => {
     req.flush(deleteMock.response);
   });
 
-  fit('should return an delete error', () => {
+  it('should return an delete error', () => {
     apiService.deleteFeedback(deleteErrorMock.id).subscribe((response) => {
       expect(response).toBe(deleteErrorMock.response);
     });
