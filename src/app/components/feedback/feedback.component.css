@@ -6,6 +6,10 @@
   gap: 30px;
 }
 
+.feedback-container:hover {
+  cursor: pointer;
+}
+
 .feedback-items {
   display: flex;
   justify-content: space-between;

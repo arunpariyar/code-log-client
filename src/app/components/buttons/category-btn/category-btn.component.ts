@@ -7,4 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class CategoryBtnComponent {
   @Input() category!: string;
+
+  onClick(event: MouseEvent) {
+    event.stopPropagation();
+    alert('need to work on this');
+  }
 }
