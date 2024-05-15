@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class FeedbackEffects {
+  constructor(private actions$: Actions, private apiService: ApiService) {}
   loadFeedbacks$ = createEffect(() =>
     this.actions$.pipe(
       ofType(init),
@@ -17,6 +18,4 @@ export class FeedbackEffects {
       )
     )
   );
-
-  constructor(private actions$: Actions, private apiService: ApiService) {}
 }

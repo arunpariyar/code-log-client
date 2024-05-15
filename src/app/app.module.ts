@@ -28,6 +28,7 @@ import { StoreModule } from '@ngrx/store';
 import { feedbackReducer } from './store/feedback.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { FeedbackEffects } from './store/feedback.effects';
+import { FeedbackDetailsComponent } from './components/feedback-details/feedback-details.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { FeedbackEffects } from './store/feedback.effects';
     EmptyDisplayComponent,
     PrimaryBtnComponent,
     NewFeedbackFormComponent,
+    FeedbackDetailsComponent,
   ],
   imports: [
     AppRoutingModule,
