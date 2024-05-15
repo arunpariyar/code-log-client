@@ -17,4 +17,18 @@ export class ApiService {
   getAllFeedback(): Observable<Feedback[]> {
     return this.http.get<Feedback[]>(this.apiUrl + '/api/feedback');
   }
+  getFeedbackById(id: string): Observable<Feedback> {
+    return this.http.get<Feedback>(this.apiUrl + '/api/feedback/' + id);
+  }
+  updateFeedback(id: string, changes: Partial<Feedback>): Observable<Feedback> {
+    return this.http.patch<Feedback>(
+      this.apiUrl + '/api/feedback/' + id,
+      changes
+    );
+  }
+  deleteFeedback(id: string): Observable<{ message: string }> {
+    return this.http.delete<{ message: string }>(
+      this.apiUrl + '/api/feedback/' + id
+    );
+  }
 }
