@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NewFeedbackFormComponent } from './components/new-feedback-form/new-feedback-form.component';
 import { FeedbackDetailsComponent } from './components/feedback-details/feedback-details.component';
+import { EditFeedbackFromComponent } from './components/edit-feedback-from/edit-feedback-from.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
     path: 'feedback/:id',
     component: FeedbackDetailsComponent,
   },
+  { path: 'feedback/edit/:id', component: EditFeedbackFromComponent },
 ];
 
 @NgModule({

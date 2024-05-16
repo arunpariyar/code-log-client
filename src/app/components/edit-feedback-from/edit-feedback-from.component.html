@@ -1,0 +1,91 @@
+<div class="feedback-container">
+  <div class="content-container">
+    <div class="back-ref">
+      <div style="display: block; margin: auto">
+        <img src="/assets/shared/icon-arrow-left.svg" />
+      </div>
+      <a class="backBtn" routerLink="/dashboard">Go Back</a>
+      <!-- <div class="backBtn" (click)="navigateToDashboard()">Go Back</div> -->
+    </div>
+
+    <div class="form-container">
+      <form [formGroup]="feedbackForm" (ngSubmit)="submitForm()">
+        <div>
+          <img
+            class="plus-sign"
+            src="assets/svg/shared/icon-edit-feedback.svg"
+          />
+        </div>
+        <div class="form-title">Edit Feedback</div>
+        <div class="btn-control">
+          <div class="input-items">
+            <label for="title" class="input-label">Feedback Title</label>
+            <p class="input-summary">Add a short, descriptive headline</p>
+            <input
+              class="input-box"
+              type="text"
+              name="title"
+              id="title"
+              placeholder=""
+              formControlName="title"
+            />
+          </div>
+          <div class="input-items">
+            <label for="category" class="input-label">Category</label>
+            <p class="input-summary">Choose a category for you feedback</p>
+            <select
+              class="input-box"
+              name="category"
+              id="category"
+              formControlName="category"
+            >
+              <option value="UI">UI</option>
+              <option value="UX">UX</option>
+              <option value="Enhancement">Enhancement</option>
+              <option value="Bug">Bug</option>
+            </select>
+          </div>
+          <div class="input-items">
+            <label for="status" class="input-label">Category</label>
+            <p class="input-summary">Choose a category for you feedback</p>
+            <select
+              class="input-box"
+              name="status"
+              id="status"
+              formControlName="status"
+            >
+              <option value="Planned">Planned</option>
+              <option value="InProgress">InProgress</option>
+              <option value="Live">Live</option>
+            </select>
+          </div>
+
+          <div class="input-items">
+            <label for="detail" class="input-label">Feedback Detail</label>
+            <p class="input-summary">
+              Include any specfic comments on what should be improved, added,
+              etc.
+            </p>
+            <textarea
+              class="input-box"
+              name="detail"
+              id="detail"
+              placeholder=""
+              formControlName="detail"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="buttons-container">
+          <div>
+            <button (click)="handleDeleteClick($event)">Delete</button>
+          </div>
+          <div>
+            <button (click)="handleCancel()">Cancel</button>
+            <button type="submit">Add Feedback</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
