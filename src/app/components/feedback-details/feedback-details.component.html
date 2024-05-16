@@ -1,0 +1,18 @@
+<div class="feedback-details-container">
+  <div class="content-container">
+    <div class="content-control-bar">
+      <div class="back-ref">
+        <div style="display: block; margin: auto">
+          <img src="/assets/shared/icon-arrow-left.svg" />
+        </div>
+        <a class="backBtn" routerLink="/dashboard">Go Back</a>
+      </div>
+      <app-primary-btn
+        text="Edit Feedback"
+        (click)="handleClickEdit()"
+      ></app-primary-btn>
+    </div>
+
+    <app-feedback [info]="currentFeedback"></app-feedback>
+  </div>
+</div>

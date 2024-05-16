@@ -1,6 +1,5 @@
-
 import { Component, Input } from '@angular/core';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feedback',
@@ -8,7 +7,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./feedback.component.css'],
 })
 export class FeedbackComponent {
-
   @Input('info') feedback!: any;
 
+  constructor(private router: Router) {}
+  handleClick() {
+    this.router.navigate(['/feedback', this.feedback.id]);
+  }
 }
