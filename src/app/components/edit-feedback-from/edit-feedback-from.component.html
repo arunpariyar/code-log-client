@@ -54,9 +54,9 @@
               id="status"
               formControlName="status"
             >
-              <option value="UI">Planned</option>
-              <option value="UX">InProgress</option>
-              <option value="Enhancement">Live</option>
+              <option value="Planned">Planned</option>
+              <option value="InProgress">InProgress</option>
+              <option value="Live">Live</option>
             </select>
           </div>
 
@@ -78,14 +78,11 @@
 
         <div class="buttons-container">
           <div>
-            <button>Delete</button>
+            <button (click)="handleDeleteClick($event)">Delete</button>
           </div>
           <div>
-            <button>Cancel</button>
-            <app-primary-btn
-              text="Add Feedback"
-              (click)="handleAddSubmit()"
-            ></app-primary-btn>
+            <button (click)="handleCancel()">Cancel</button>
+            <button type="submit">Add Feedback</button>
           </div>
         </div>
       </form>

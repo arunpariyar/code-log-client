@@ -8,9 +8,8 @@ import { Store } from '@ngrx/store';
 import { init } from 'src/app/store/feedback.actions';
 import { Feedback } from 'src/app/model/feedback';
 import { Observable } from 'rxjs';
-import { AppState, selectFeedback } from 'src/app/store/feedback.selector';
-import { map, filter } from 'rxjs';
-import { addFeedback } from 'src/app/store/feedback.actions';
+import { selectFeedback } from 'src/app/store/feedback.selector';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-edit-feedback-from',
@@ -43,7 +42,9 @@ export class EditFeedbackFromComponent
     });
 
     this.id = this.route.snapshot.params['id'];
-    this.getFeedbacks(this.id);
+    if (this.id) {
+      this.getFeedbacks(this.id);
+    }
   }
 
   getFeedbacks(id: string): void {
@@ -51,7 +52,7 @@ export class EditFeedbackFromComponent
     this.allFeedbacks$ = this.eStore.select(selectFeedback);
 
     this.allFeedbacks$
-      .pipe(map((data) => data.filter((result) => result.id === this.id)))
+      .pipe(map((data) => data.filter((result) => result.id === id)))
       .subscribe((data) => {
         if (data.length > 0) {
           const { title, category, detail, status } = data[0];
@@ -65,28 +66,49 @@ export class EditFeedbackFromComponent
       });
   }
 
-  handleAddSubmit() {
-    console.log(this.id);
-    console.log(this.feedbackForm.value);
-    // if (this.feedbackForm.valid) {
-    //   this.eApiService.updateFeedback(this.id, this.feedbackForm.value);
-    // }
+  override submitForm() {
+    if (this.feedbackForm.valid) {
+      this.eApiService
+        .updateFeedback(this.id, this.feedbackForm.value)
+        .subscribe({
+          next: () => {
+            console.log('feedback updated ✨');
+            this.reloadStore();
+            this.feedbackForm.reset();
+            this.redirectToDashboard();
+          },
+          error: (error) => {
+            console.error('Error:', error);
+          },
+        });
+    }
   }
-  // this.eRouter.navigate(['/', 'dashboard']);
+
+  handleCancel() {
+    this.redirectToDashboard();
+  }
+
+  reloadStore() {
+    this.eStore.dispatch(init());
+  }
+
+  handleDeleteClick(event: MouseEvent) {
+    event.preventDefault();
+    if (confirm('Are you sure to you want to delete ?')) {
+      this.eApiService.deleteFeedback(this.id).subscribe({
+        next: () => {
+          this.reloadStore();
+          this.redirectToDashboard();
+          console.log('feedback deleted ✨');
+        },
+        error: (error) => {
+          console.error(error);
+        },
+      });
+    }
+  }
+
+  redirectToDashboard() {
+    this.eRouter.navigate(['/', 'dashboard']);
+  }
 }
-
-// submitForm() {
-//   if (this.feedbackForm.valid) {
-//     const newFeedback = this.apiService.createFeedback(
-//       this.feedbackForm.value
-//     );
-//     newFeedback.subscribe((data) =>
-//       this.store.dispatch(addFeedback({ feedback: data }))
-//     );
-//   }
-//   this.router.navigate(['/', 'dashboard']);
-// }
-
-// navigateToDashboard() {
-//   this.router.navigate(['/', 'dashboard']);
-// }
