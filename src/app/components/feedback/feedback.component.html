@@ -1,13 +1,21 @@
 <div class="feedback-container" (click)="handleClick()">
-  <app-upvoter-btn [count]="feedback?.upvotes"></app-upvoter-btn>
+  <app-upvoter-btn
+    class="upvoter-btn"
+    [count]="feedback?.upvotes"
+  ></app-upvoter-btn>
   <div class="feedback-items">
     <div class="feedback-info">
       <p class="feedback-title">{{ feedback?.title }}</p>
       <p class="feedback-summary">{{ feedback?.detail }}</p>
       <app-category-btn [category]="feedback?.category"></app-category-btn>
     </div>
-    <div class="comments">
-      <p>💬 2</p>
-    </div>
+  </div>
+  <div class="comment-content">
+    <img
+      src="assets/shared/icon-comments.svg"
+      alt="comments icon"
+      height="15px"
+    />
+    <p class="comment-amount">{{ randonNum() }}</p>
   </div>
 </div>
