@@ -11,10 +11,10 @@
     <app-feedback-bar></app-feedback-bar>
     <div
       class="feedback-column"
-      *ngIf="feedbacks$ | async as feedbacks; else emptyDisplay"
+      *ngIf="(feedbacks$ | async)!.length > 0; else emptyDisplay"
     >
       <app-feedback
-        *ngFor="let feedback of feedbacks"
+        *ngFor="let feedback of feedbacks$ | async"
         [info]="feedback"
       ></app-feedback>
     </div>
