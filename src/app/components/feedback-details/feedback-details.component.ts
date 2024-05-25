@@ -38,4 +38,6 @@ export class FeedbackDetailsComponent implements OnInit {
   handleClickEdit() {
     this.router.navigate(['/feedback/edit/', this.currentFeedback.id]);
   }
+
+  removeStyle() {}
 }

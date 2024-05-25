@@ -1,5 +1,6 @@
 .container {
-  height: 150px;
+  /* this height property is a short fix proper solution needed later */
+  height: 170px;
   border-radius: 10px;
   background-color: #ff99a0;
   background-image: radial-gradient(

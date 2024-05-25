@@ -4,6 +4,9 @@
 }
 
 .upvoter-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   background-color: var(--secondary-white);
   outline: none;
   border: none;
@@ -21,4 +24,12 @@
 }
 .upvoter-btn:active {
   background-color: var(--secondary);
+}
+
+@media (max-width: 700px) {
+  .upvoter-btn {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
 }

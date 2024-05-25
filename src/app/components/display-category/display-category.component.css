@@ -15,3 +15,10 @@
   line-height: var(--h3-line);
   letter-spacing: var(--h3-spacing);
 }
+
+@media (max-width: 965px) {
+  /* .display-category-container {
+    height: 100%;
+    width: 80%;
+  } */
+}

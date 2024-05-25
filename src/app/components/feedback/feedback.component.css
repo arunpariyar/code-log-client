@@ -4,6 +4,7 @@
   border-radius: 10px;
   display: flex;
   gap: 30px;
+  position: relative;
 }
 
 .feedback-container:hover {
@@ -35,4 +36,32 @@
   font-family: var(--jost);
   font-size: var(--h4-size);
   color: var(--gray);
+}
+
+.comment-content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: var(--jost);
+  font-size: var(--h4-size);
+  font-weight: var(--h4-weight);
+  line-height: var(--h4-line);
+  letter-spacing: var(--h4-spacing);
+}
+
+@media (max-width: 700px) {
+  .feedback-container {
+    flex-direction: column;
+  }
+
+  .upvoter-btn {
+    flex-direction: column;
+    order: 1;
+  }
+
+  .comment-content {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+  }
 }
