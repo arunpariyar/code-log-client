@@ -13,4 +13,7 @@ export class FeedbackComponent {
   handleClick() {
     this.router.navigate(['/feedback', this.feedback.id]);
   }
+  randonNum() {
+    return Math.floor(Math.random() * 10);
+  }
 }

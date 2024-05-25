@@ -1,17 +1,20 @@
 <div class="container">
   <div class="side-bar">
-    <app-main-logo></app-main-logo>
-    <app-display-category [catagories]="allCatagories"></app-display-category>
-    <app-roadmap-sidebar></app-roadmap-sidebar>
+    <app-main-logo class="side-bar-child"></app-main-logo>
+    <app-display-category
+      class="side-bar-child"
+      [catagories]="allCatagories"
+    ></app-display-category>
+    <app-roadmap-sidebar class="side-bar-child"></app-roadmap-sidebar>
   </div>
   <div class="main-area">
     <app-feedback-bar></app-feedback-bar>
     <div
       class="feedback-column"
-      *ngIf="feedbacks$ | async as feedbacks; else emptyDisplay"
+      *ngIf="(feedbacks$ | async)!.length > 0; else emptyDisplay"
     >
       <app-feedback
-        *ngFor="let feedback of feedbacks"
+        *ngFor="let feedback of feedbacks$ | async"
         [info]="feedback"
       ></app-feedback>
     </div>
