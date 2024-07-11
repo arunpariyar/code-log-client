@@ -17,3 +17,8 @@ export const getAllFeedbackApi = createAction(
   '[Feedback] GETALLFEEDBACK',
   props<{ feedbacks: Feedback[] }>()
 );
+
+export const upvote = createAction(
+  '[Feedback] UPVOTE_FEEDBACK',
+  props<{ payload: string }>()
+);

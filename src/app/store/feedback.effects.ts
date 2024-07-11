@@ -1,6 +1,6 @@
-import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { act, Actions, createEffect, ofType } from '@ngrx/effects';
 import { ApiService } from '../api.service';
-import { getAllFeedbackApi, init, set } from './feedback.actions';
+import { getAllFeedbackApi, init, set, upvote } from './feedback.actions';
 import { catchError, mergeMap, map, of, EMPTY } from 'rxjs';
 import { Injectable } from '@angular/core';
 
@@ -18,4 +18,12 @@ export class FeedbackEffects {
       )
     )
   );
+  // upvoteFeedback$ = createEffect(() =>
+  //   this.actions$.pipe(
+  //     ofType(upvote),
+  //     mergeMap((action) =>
+  //       this.apiService.upvoteFeedback(action.payload).pipe(map(feedback))
+  //     )
+  //   )
+  // );
 }
