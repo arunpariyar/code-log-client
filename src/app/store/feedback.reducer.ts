@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { Feedback } from '../model/feedback';
+import { Feedback } from '../models/feedback';
 import { addFeedback, getAllFeedbackApi, set } from './feedback.actions';
 
 const initialState: Feedback[] = [];
@@ -11,7 +11,7 @@ export const feedbackReducer = createReducer(
     return [...state, action.feedback];
   }),
   on(getAllFeedbackApi, (_, action) => {
-    return [...action.feedback];
+    return [...action.feedbacks];
   }),
-  on(set, (state, action) => action.feedback)
+  on(set, (state, action) => action.feedbacks)
 );

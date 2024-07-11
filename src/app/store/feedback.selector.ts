@@ -1,8 +1,4 @@
 import { createSelector } from '@ngrx/store';
-import { Feedback } from '../model/feedback';
-
-export interface AppState {
-  feedback: Feedback[];
-}
+import { AppState } from '../models/appstate';
 
 export const selectFeedback = (state: AppState) => state.feedback;

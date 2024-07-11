@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { Router } from '@angular/router';
+import { Feedback } from 'src/app/models/feedback';
+import { Observable } from 'rxjs';
+import { selectFeedback } from 'src/app/store/feedback.selector';
 
 @Component({
   selector: 'app-feedback-bar',
@@ -7,7 +11,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./feedback-bar.component.css'],
 })
 export class FeedbackBarComponent {
-  noOfSgs = 6;
+  private store = inject(Store);
+  feedbacks$: Observable<Feedback[]> = this.store.select(selectFeedback);
 
   constructor(private router: Router) {}
   navigateToForm() {

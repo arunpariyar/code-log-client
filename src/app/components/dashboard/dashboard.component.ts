@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
-import { Feedback } from 'src/app/model/feedback';
+import { Feedback } from 'src/app/models/feedback';
 import { init } from 'src/app/store/feedback.actions';
 import { selectFeedback } from 'src/app/store/feedback.selector';
 
