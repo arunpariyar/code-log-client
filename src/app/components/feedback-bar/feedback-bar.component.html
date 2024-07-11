@@ -3,7 +3,9 @@
     <div>
       <img src="assets/svg/icon-suggestions.svg" />
     </div>
-    <div class="suggestions">{{ noOfSgs }} Suggestions</div>
+    <div class="suggestions">
+      {{ (feedbacks$ | async)!.length }} Suggestions
+    </div>
     <div>DropDown menu</div>
   </div>
   <app-primary-btn

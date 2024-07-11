@@ -12,7 +12,7 @@ export class FeedbackEffects {
       ofType(init),
       mergeMap(() =>
         this.apiService.getAllFeedback().pipe(
-          map((feedbacks) => set({ feedback: feedbacks })),
+          map((feedbacks) => set({ feedbacks: feedbacks })),
           catchError((error) => EMPTY)
         )
       )

@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { Feedback } from 'src/app/model/feedback';
+import { Feedback } from 'src/app/models/feedback';
 import { selectFeedback } from 'src/app/store/feedback.selector';
 import { Observable, filter, first, map } from 'rxjs';
 import { init } from 'src/app/store/feedback.actions';

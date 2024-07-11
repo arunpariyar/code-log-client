@@ -6,7 +6,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/api.service';
 import { Store } from '@ngrx/store';
 import { init } from 'src/app/store/feedback.actions';
-import { Feedback } from 'src/app/model/feedback';
+import { Feedback } from 'src/app/models/feedback';
 import { Observable } from 'rxjs';
 import { selectFeedback } from 'src/app/store/feedback.selector';
 import { map } from 'rxjs';
