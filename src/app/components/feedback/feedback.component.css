@@ -55,7 +55,6 @@
   }
 
   .upvoter-btn {
-    flex-direction: column;
     order: 1;
   }
 
