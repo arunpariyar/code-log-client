@@ -1,0 +1,18 @@
+.btn-cancel {
+  background-color: var(--primary-dark);
+  border: none;
+  outline: none;
+  color: var(--primary-white);
+  font-family: var(--jost);
+  font-weight: var(--h4-weight);
+  font-size: var(--h4-size);
+  letter-spacing: var(--h4-spacing);
+  line-height: var(--h4-line);
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background-color: var(--primary-dark-hover);
+}
