@@ -22,3 +22,14 @@ export const upvote = createAction(
   '[Feedback] UPVOTE_FEEDBACK',
   props<{ payload: string }>()
 );
+
+export const upvoteSuccess = createAction(
+  '[Feedback] Upvote Success',
+  props<{ result: Feedback }>()
+);
+
+// NOT NEEDED JUST YET - NO REDUCER FOR THIS JUST YET
+export const upvoteFailure = createAction(
+  '[Feedback] Upvote Failure',
+  props<{ error: string }>()
+);
