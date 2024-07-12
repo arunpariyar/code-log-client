@@ -31,4 +31,7 @@ export class ApiService {
       this.apiUrl + '/api/feedback/' + id
     );
   }
+  upvoteFeedback(id: string): Observable<Feedback> {
+    return this.http.get<Feedback>(this.apiUrl + '/api/feedback/upvote/' + id);
+  }
 }
