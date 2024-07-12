@@ -94,19 +94,20 @@ h6 {
   --secondary: #4661e6;
   --secondary-light: #cfd7ff;
 
-
   --primary-white: #fff;
   --secondary-white: #f2f4ff;
   --teritery-white: #f7f8fd;
-  --background-white: #f2f2f2
+  --background-white: #f2f2f2;
 
-  --fixme: #3a4374;
+  --primary-dark: #3a4374;
+  --primary-dark-hover: #656ea3;
 
   --dark: #373f68;
   --light-text: #647196;
- 
+
   /* not used yet */
-  --danger: #f49f85;
+  --danger: #d73737;
+  --danger-hover: #e98888;
   --maya-blue: #62bcfa;
   /* various button */
 }

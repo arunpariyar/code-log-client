@@ -77,12 +77,15 @@
         </div>
 
         <div class="buttons-container">
-          <div>
-            <button (click)="handleDeleteClick($event)">Delete</button>
-          </div>
-          <div>
-            <button (click)="handleCancel()">Cancel</button>
-            <button type="submit">Add Feedback</button>
+          <app-delete-btn text="Delete" (click)="handleDeleteClick($event)"
+            >Delete</app-delete-btn
+          >
+          <div class="button-group">
+            <app-cancel text="Cancel" (click)="handleCancel()"></app-cancel>
+            <app-primary-btn
+              text="Add Feedback"
+              type="submit"
+            ></app-primary-btn>
           </div>
         </div>
       </form>

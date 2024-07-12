@@ -22,9 +22,10 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { EmptyDisplayComponent } from './components/empty-display/empty-display.component';
 import { PrimaryBtnComponent } from './components/buttons/primary-btn/primary-btn.component';
 import { NewFeedbackFormComponent } from './components/new-feedback-form/new-feedback-form.component';
-import { StoreModule } from '@ngrx/store';
+import { CancelComponent } from './components/buttons/cancel/cancel.component';
 
-//NGRX Reducers
+//NGRX store and reducers
+import { StoreModule } from '@ngrx/store';
 import { feedbackReducer } from './store/feedback.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { FeedbackEffects } from './store/feedback.effects';
@@ -33,6 +34,7 @@ import { EditFeedbackFromComponent } from './components/edit-feedback-from/edit-
 
 //devtools
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { DeleteBtnComponent } from './components/buttons/delete-btn/delete-btn.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     NewFeedbackFormComponent,
     FeedbackDetailsComponent,
     EditFeedbackFromComponent,
+    CancelComponent,
+    DeleteBtnComponent,
   ],
   imports: [
     AppRoutingModule,
