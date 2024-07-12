@@ -1,4 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Feedback } from 'src/app/models/feedback';
+import { init, upvote } from 'src/app/store/feedback.actions';
 
 @Component({
   selector: 'app-upvoter-btn',
@@ -7,9 +10,12 @@ import { Component, Input } from '@angular/core';
 })
 export class UpvoterBtnComponent {
   @Input() count!: number;
+  @Input() id!: number;
+
+  constructor(private store: Store<{ feedback: Feedback[] }>) {}
 
   onClick(event: MouseEvent) {
     event.stopPropagation();
-    alert('need to work on this');
+    this.store.dispatch(upvote({ payload: String(this.id) }));
   }
 }

@@ -1,5 +1,5 @@
 // Modules
-import { NgModule } from '@angular/core';
+import { isDevMode, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -31,6 +31,9 @@ import { FeedbackEffects } from './store/feedback.effects';
 import { FeedbackDetailsComponent } from './components/feedback-details/feedback-details.component';
 import { EditFeedbackFromComponent } from './components/edit-feedback-from/edit-feedback-from.component';
 
+//devtools
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,6 +64,10 @@ import { EditFeedbackFromComponent } from './components/edit-feedback-from/edit-
       feedback: feedbackReducer,
     }),
     EffectsModule.forRoot([FeedbackEffects]),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: !isDevMode,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
