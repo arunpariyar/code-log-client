@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./display-category.component.css'],
 })
 export class DisplayCategoryComponent {
-  @Input() catagories: string[] = ['test'];
+  @Input() catagories: string[] = [];
 }

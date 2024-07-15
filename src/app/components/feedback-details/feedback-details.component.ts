@@ -19,7 +19,7 @@ export class FeedbackDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private store: Store<{ feedback: Feedback[] }>
+    private store: Store<{ feedback: Feedback[]; filter: String }>
   ) {}
 
   ngOnInit(): void {
