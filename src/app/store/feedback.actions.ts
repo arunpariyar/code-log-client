@@ -33,3 +33,8 @@ export const upvoteFailure = createAction(
   '[Feedback] Upvote Failure',
   props<{ error: string }>()
 );
+
+export const setFilter = createAction(
+  '[Feedback] SET_FILTER',
+  props<{ filter: string }>()
+);
