@@ -6,7 +6,18 @@
     <div class="suggestions">
       {{ (feedbacks$ | async)!.length }} Suggestions
     </div>
-    <div>DropDown menu</div>
+    <div class="sorting-container">
+      <div class="sortby-text">Sort by :</div>
+      <select class="sorting-menu" (change)="sortByOption($event)">
+        <option
+          class="sorting-option"
+          *ngFor="let option of sortOptions"
+          [value]="option"
+        >
+          {{ option }}
+        </option>
+      </select>
+    </div>
   </div>
   <app-primary-btn
     (click)="navigateToForm()"
