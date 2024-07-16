@@ -21,10 +21,21 @@ export const selectFilteredFeedback = createSelector(
   selectFeedback,
   selectFilter,
   (feedback, filter) => {
-    if (filter === 'All') {
-      return feedback;
-    } else {
-      return feedback.filter((item) => item.category === filter);
+    switch (filter) {
+      case 'MOST_UPVOTES':
+        const mostUpvoteSorted = [...feedback].sort(
+          (a, b) => b.upvotes - a.upvotes
+        );
+        return mostUpvoteSorted;
+      case 'LEAST_UPVOTES':
+        const leastUpvoteSorted = [...feedback].sort(
+          (a, b) => a.upvotes - b.upvotes
+        );
+        return leastUpvoteSorted;
+      case 'All':
+        return feedback;
+      default:
+        return feedback.filter((item) => item.category === filter);
     }
   }
 );

@@ -23,7 +23,10 @@ export const feedbackReducer = createReducer(
     return { feedback: [...state.feedback, feedback], filter: state.filter };
   }),
   on(getAllFeedbackApi, (state, { feedbacks }) => {
-    return { feedback: [...feedbacks], filter: state.filter };
+    return {
+      feedback: [...feedbacks].sort((a, b) => b.upvotes - a.upvotes),
+      filter: state.filter,
+    };
   }),
   on(upvoteSuccess, (state, action) => {
     const result = state.feedback
@@ -33,11 +36,14 @@ export const feedbackReducer = createReducer(
         }
         return feedback;
       })
-      .sort((a, b) => a.upvotes - b.upvotes);
+      .sort((a, b) => b.upvotes - a.upvotes);
 
     return { feedback: [...result], filter: state.filter };
   }),
   on(set, (state, { feedbacks }) => {
-    return { ...state, feedback: feedbacks };
+    const sortedFeedbacks = [...feedbacks].sort(
+      (a, b) => b.upvotes - a.upvotes
+    );
+    return { ...state, feedback: sortedFeedbacks };
   })
 );
