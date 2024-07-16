@@ -5,21 +5,28 @@ import {
   getAllFeedbackApi,
   set,
   upvoteSuccess,
+  setFilter,
 } from './feedback.actions';
+import { AppState } from '../models/appstate';
 
-const initialState: Feedback[] = [];
+const initialState: AppState = {
+  feedback: [],
+  filter: 'All',
+};
 
 export const feedbackReducer = createReducer(
   initialState,
-  //TODO - this should start an effect for sending data to server
-  on(addFeedback, (state, action) => {
-    return [...state, action.feedback];
+  on(setFilter, (state, { filter }) => {
+    return { ...state, filter };
   }),
-  on(getAllFeedbackApi, (_, action) => {
-    return [...action.feedbacks];
+  on(addFeedback, (state, { feedback }) => {
+    return { feedback: [...state.feedback, feedback], filter: state.filter };
+  }),
+  on(getAllFeedbackApi, (state, { feedbacks }) => {
+    return { feedback: [...feedbacks], filter: state.filter };
   }),
   on(upvoteSuccess, (state, action) => {
-    return state
+    const result = state.feedback
       .map((feedback) => {
         if (feedback.id === action.result.id) {
           return { ...feedback, upvotes: action.result.upvotes };
@@ -27,6 +34,10 @@ export const feedbackReducer = createReducer(
         return feedback;
       })
       .sort((a, b) => a.upvotes - b.upvotes);
+
+    return { feedback: [...result], filter: state.filter };
   }),
-  on(set, (_, action) => action.feedbacks)
+  on(set, (state, { feedbacks }) => {
+    return { ...state, feedback: feedbacks };
+  })
 );

@@ -3,7 +3,6 @@
   grid-template-columns: [full-start] 1fr repeat(10, [col-start] 1fr [col-end]) 1fr [full-end];
   margin: 10vh 100px;
   grid-gap: 30px;
-  background-color: var(--background-white);
 }
 
 .side-bar {

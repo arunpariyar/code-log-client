@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
+import { AppState } from 'src/app/models/appstate';
 import { Feedback } from 'src/app/models/feedback';
 import { init } from 'src/app/store/feedback.actions';
-import { selectFeedback } from 'src/app/store/feedback.selector';
+import { selectFilteredFeedback } from 'src/app/store/feedback.selector';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,8 +16,8 @@ export class DashboardComponent implements OnInit {
 
   feedbacks$: Observable<Feedback[]> | undefined;
 
-  constructor(private store: Store<{ feedback: Feedback[] }>) {
-    this.feedbacks$ = store.select(selectFeedback);
+  constructor(private store: Store<AppState>) {
+    this.feedbacks$ = store.select(selectFilteredFeedback);
   }
 
   ngOnInit(): void {

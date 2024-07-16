@@ -28,7 +28,7 @@ export class EditFeedbackFromComponent
     private eRouter: Router,
     private eformBuilder: FormBuilder,
     private eApiService: ApiService,
-    private eStore: Store<{ feedback: Feedback[] }>,
+    private eStore: Store<{ feedback: Feedback[]; filter: String }>,
     private route: ActivatedRoute
   ) {
     super(eRouter, eformBuilder, eApiService, eStore);
