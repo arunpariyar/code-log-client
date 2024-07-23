@@ -1,6 +1,7 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { AppState } from '../models/appstate';
 import { Feedback } from '../models/feedback';
+import { keyframes } from '@angular/animations';
 
 export const selectFeatureFeedback =
   createFeatureSelector<AppState>('feedback');
@@ -16,6 +17,24 @@ export const selectFilter = createSelector(
   selectFeatureFeedback,
   (state) => state.filter
 );
+
+export const allStatusArray = createSelector(selectFeedback, (state) => {
+  let list = [
+    { key: 'Planned', value: 0, color: '#f49f85' },
+    { key: 'InProgress', value: 0, color: '#ad2fea' },
+    { key: 'Live', value: 0, color: '#62bcfa' },
+  ];
+
+  state.forEach((feedback) => {
+    list.forEach((item) => {
+      if (item.key === feedback.status) {
+        item.value++;
+      }
+    });
+  });
+
+  return list;
+});
 
 export const selectFilteredFeedback = createSelector(
   selectFeedback,
