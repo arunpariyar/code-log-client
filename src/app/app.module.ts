@@ -35,6 +35,7 @@ import { EditFeedbackFromComponent } from './components/edit-feedback-from/edit-
 //devtools
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { DeleteBtnComponent } from './components/buttons/delete-btn/delete-btn.component';
+import { RoadmapComponent } from './components/roadmap/roadmap.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { DeleteBtnComponent } from './components/buttons/delete-btn/delete-btn.c
     EditFeedbackFromComponent,
     CancelComponent,
     DeleteBtnComponent,
+    RoadmapComponent,
   ],
   imports: [
     AppRoutingModule,
