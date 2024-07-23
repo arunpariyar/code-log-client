@@ -9,12 +9,25 @@
   margin-bottom: 10px;
 }
 
+.list-ul {
+  padding-inline-start: 16px;
+}
+
+.list-li::marker {
+  font-size: 1.5em;
+}
+
 .list {
   display: flex;
   justify-content: space-between;
   font-family: var(--jost);
-  line-height: 2;
+
   color: var(--dark);
+  align-items: center;
+}
+
+.list::marker {
+  color: red;
 }
 
 .view-link {
