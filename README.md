@@ -24,16 +24,16 @@ This is what you get with CodeLog where the developers can log their insight for
 
 ## Overview
 
-This is a web-based application that helps users to centrally manage their finances efficiently using modern React and Node.js technologies.
+CodeLog is a user-centric app designed to streamline product feedback management, enabling teams to create, read, update, and delete feedback requests effortlessly. The app allows suggestions to be sorted by the most or least upvotes and filtered by category, making it easy to prioritize and focus on relevant feedback. Its responsive design adapts seamlessly to any device, delivering an optimal layout for smartphones, tablets, and desktops. Additionally, interactive elements with hover states enhance usability, providing a dynamic and intuitive experience for managing feedback effectively and driving meaningful product improvements.
 
 ---
 
 ## Tech Stack
 
-- **Front-end**: TypeScript, React, React Query, React Router, React ChartJS, React Hot Toast, Zod, Vanilla CSS, CSS Modules
+- **Front-end**: TypeScript, Angular, NgRx, Vanilla CSS, Vercel
 - **Back-end**: TypeScript, Node.js, Express.js, Prisma
-- **Database**: Postgres
-- **Other Tools**: AWS Amplify, CI/CD, Render
+- **Database**: PostgreSQL
+- **Hosting**: Vercel, CI/CD, Render
 
 ---
 
