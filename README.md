@@ -39,28 +39,24 @@ CodeLog is a user-centric app designed to streamline product feedback management
 
 ## Features
 
-- View all personal finance data at-a-glance on the Overview page.
-  Perform full CRUD operations (Create, Read, Update, Delete) for budgets and saving pots.
-- View the latest three transactions for each budget category.
-- Track progress towards saving goals for each pot.
-- Add and withdraw money from saving pots effortlessly.
-- Enjoy an optimal layout for the interface on any device,
+- Create, read, update, and delete product feedback requests
+- Receive form validations when trying to create/edit feedback requests
+- Sort suggestions by most/least upvotes and most/least comments
+- Filter suggestions by category
+- Upvote product feedback requests
+- View the optimal layout for the app depending on their device's screen size
 
 ---
 
 ## Installation
 
-Provide step-by-step instructions on how to set up the project locally.
-
-Example:
-
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/project-name.git
+   git clone https://github.com/arunpariyar/code-log-client.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd project-name
+   cd code-log-client
    ```
 3. Install dependencies:
    ```bash
@@ -75,10 +71,13 @@ Example:
 
 ## Usage
 
-Describe how to use the project. Include examples, code snippets, or commands to demonstrate functionality.
-
-Example:
-"To log in, use the default credentials provided in the seed data, or register for a new account."
+- The app starts with automatically loading the feedbacks to the dashboard.
+- You can create new feedbacks using the add feedback button.
+- Once the feedback is created editing to update the feedback is straight forward.
+- On the dashboard you can upvote feedback by clicking the upvote button, changes will load instantaneously.
+- To filter feedbacks according to category is easy, you just have to click the category you wish you see.
+- If no feedback exits for a category an empty info is provided along with the add feedback button to help you create a new feedback.
+- To filter the upvotes my most/least upvotes, just select the option you wish to activate using the dropdown.
 
 ---
 
